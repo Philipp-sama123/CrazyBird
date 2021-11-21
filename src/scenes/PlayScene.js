@@ -48,7 +48,7 @@ class PlayScene extends BaseScene {
 
     this.anims.create({
       key: 'fly',
-      frames: this.anims.generateFrameNumbers('bird', { start: 9, end: 15}),
+      frames: this.anims.generateFrameNumbers('bird', { start: 9, end: 15 }),
       // 24 fps default, it will play animation consisting of 24 frames in 1 second
       // in case of framerate 2 and sprite of 8 frames animations will play in
       // 4 sec; 8 / 2 = 4
@@ -131,13 +131,13 @@ class PlayScene extends BaseScene {
   createScore() {
     this.score = 0;
     const bestScore = localStorage.getItem('bestScore');
-    this.scoreText = this.add.text(16, 16, `Score: ${0}`, { fontSize: '32px', fill: '#000'});
-    this.add.text(16, 52, `Best score: ${bestScore || 0}`, { fontSize: '18px', fill: '#000'});
+    this.scoreText = this.add.text(16, 16, `Score: ${0}`, { fontSize: '32px', fill: '#000' });
+    this.add.text(16, 52, `Best score: ${bestScore || 0}`, { fontSize: '18px', fill: '#000' });
   }
 
   createPause() {
     this.isPaused = false;
-    const pauseButton = this.add.image(this.config.width - 10, this.config.height -10, 'pause')
+    const pauseButton = this.add.image(this.config.width - 10, this.config.height - 10, 'pause')
       .setInteractive()
       .setScale(3)
       .setOrigin(1);
@@ -203,7 +203,7 @@ class PlayScene extends BaseScene {
   getRightMostPipe() {
     let rightMostX = 0;
 
-    this.pipes.getChildren().forEach(function(pipe) {
+    this.pipes.getChildren().forEach(function (pipe) {
       rightMostX = Math.max(pipe.x, rightMostX);
     })
 

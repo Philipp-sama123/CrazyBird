@@ -7,8 +7,8 @@ class PauseScene extends BaseScene {
     super('PauseScene', config);
 
     this.menu = [
-      {scene: 'PlayScene', text: 'Continue'},
-      {scene: 'MenuScene', text: 'Exit'},
+      { scene: 'PlayScene', text: 'Continue' },
+      { scene: 'MenuScene', text: 'Exit' },
     ]
   }
 
@@ -22,11 +22,11 @@ class PauseScene extends BaseScene {
     textGO.setInteractive();
 
     textGO.on('pointerover', () => {
-      textGO.setStyle({fill: '#ff0'});
+      textGO.setStyle({ fill: '#ff0' });
     })
 
     textGO.on('pointerout', () => {
-      textGO.setStyle({fill: '#fff'});
+      textGO.setStyle({ fill: '#fff' });
     })
 
     textGO.on('pointerup', () => {

@@ -7,9 +7,9 @@ class MenuScene extends BaseScene {
     super('MenuScene', config);
 
     this.menu = [
-      {scene: 'PlayScene', text: 'Play'},
-      {scene: 'ScoreScene', text: 'Score'},
-      {scene: null, text: 'Exit'},
+      { scene: 'PlayScene', text: 'Play' },
+      { scene: 'ScoreScene', text: 'Score' },
+      { scene: null, text: 'Exit' },
     ]
   }
 
@@ -24,11 +24,11 @@ class MenuScene extends BaseScene {
     textGO.setInteractive();
 
     textGO.on('pointerover', () => {
-      textGO.setStyle({fill: '#ff0'});
+      textGO.setStyle({ fill: '#ff0' });
     })
 
     textGO.on('pointerout', () => {
-      textGO.setStyle({fill: '#fff'});
+      textGO.setStyle({ fill: '#fff' });
     })
 
     textGO.on('pointerup', () => {
@@ -42,8 +42,3 @@ class MenuScene extends BaseScene {
 }
 
 export default MenuScene;
-
-
-
-// Create ScoreScene
-// Display Best score, you can get from the local storage
